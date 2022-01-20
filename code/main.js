@@ -20,6 +20,7 @@ pad.addEventListener("click", show)
 // ===== Functions =====
 
 
+// Funcion inicial y validacion de tipo de boton presionado
 function show(event) {
     if (event.target.dataset.value !== undefined) {
         
@@ -37,12 +38,16 @@ function show(event) {
         } else if (event.target.dataset.type === "num" 
             || event.target.dataset.type === "dot") {
                 calculate(event.target)
+        } else {
+            action(event.target)
         }
     }
     // console.log("primer log", logs)
 }
 
 
+
+// Casos de numeros y dot
 function calculate(event) {
 
     if (event.dataset.type === "num") {
@@ -56,6 +61,25 @@ function calculate(event) {
             screenValue = logs.record0 + "."
             screen.innerHTML = screenValue
             logs.record0 = screenValue
-    }
+    } 
     // console.log("segundo log", logs)
 }
+
+// Casos de botones de action
+
+function action(event) {
+
+    if (event.dataset.type === "action") {
+        console.log("este valor es = ", event.dataset.value)
+    } else {
+        // console.log("estos son especiales: ", event.dataset.value)
+        del()
+    }
+}
+
+function del() {
+    logs.record0 = logs.record0.slice(0, (logs.record0.length - 1))
+    screen.innerHTML = logs.record0
+}
+
+/* puedo usar logs.record0.length = 0 para hacer que se resetee  */
