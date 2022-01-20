@@ -1,0 +1,209 @@
+:root {
+    --main--background: hsl(222, 26%, 31%);
+    --screen--background: hsl(224, 36%, 15%);
+    --keypad--background: hsl(223, 31%, 20%);
+
+    --special--background: hsl(225, 21%, 49%);
+    --special--shadow: hsl(224, 28%, 35%);
+    --equal--key--background: hsl(6, 63%, 50%);
+    --equal--shadow: hsl(6, 70%, 34%);
+    --buttons--background: hsl(30, 25%, 89%);
+    --buttons--shadow: hsl(28, 16%, 65%);
+
+    --text--buttons: hsl(221, 14%, 31%);
+    --text--color: rgb(255, 255, 255);
+    --font--size: 32px;
+}
+
+/* ===== Generic CSS ===== */
+
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+main {
+    background-color: var(--main--background);
+    width: 100%;
+    height: 70%;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+/* ===== Header ===== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+
+header h1 {
+    color: var(--text--color);
+    font-size: var(--font--size);
+    margin: 0;
+}
+
+header .theme--container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text--color);
+    font-size: 12px;
+}
+
+.theme--container > p  {
+    align-content: baseline;
+    margin: 20px 0 0
+}
+
+
+.accion--container .theme--nums {
+    display: flex;
+    justify-content: space-around;
+}
+
+.theme--nums p {
+    margin: 0 0 2px 5px;
+}
+
+.slider {
+    width: 80px;
+    margin: 0;
+}
+
+
+
+
+
+.slider input {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 25px;
+  border-radius: 10px;
+  background: var(--keypad--background);
+  border: 1px solid var(--keypad--background);
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+.slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--equal--key--background);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+/* ===== Screen ===== */
+
+.screen--background {
+    max-width: 100%;
+    height: 15%;
+    background-color: var(--screen--background);
+    border: 1px solid #000;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.screen--num {
+    color: var(--text--color);
+    font-size: var(--font--size);
+    margin: 0;
+}
+
+/* ===== key Pad ===== */
+
+.keyPad--background {
+    height: 65%;
+    max-width: 100%;
+    background-color: var(--keypad--background);
+    border: 1px solid #000;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keypad--container {
+    height: 90%;
+    width: 90%;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.num--button, 
+.del--button, 
+.reset--button,
+.equal--button {
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.del--button, 
+.reset--button, 
+.equal--button {
+    background-color: var(--special--background);
+    font-size: 1rem;
+    color: var(--text--color);
+}
+
+.num--button {
+    background-color: var(--buttons--background);
+    border-bottom: 5px solid var(--buttons--shadow);
+}
+
+.del--button {
+    border-bottom: 5px solid var(--special--shadow);
+}
+
+.reset--button {
+    grid-column: 1 / 3;
+    border-bottom: 5px solid var(--special--shadow);
+}
+
+.equal--button {
+    grid-column: 3 / 5;
+    background-color: var(--equal--key--background);
+    border-bottom: 5px solid var(--equal--shadow);
+}
+
+
+/* ===== Efeto de click para mas tarde ===== */
+
+.click {
+    border-top: 2px solid var(--keypad--background);
+    border-bottom: none;
+    opacity: .5;
+}

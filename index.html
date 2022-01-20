@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+	<title>Frontend Mentor | Calculator app</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="./code/style.css">
+
+	<script defer src="./code/main.js"></script>
+
+
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<!-- <style>
+		.attribution { font-size: 11px; text-align: center; }
+		.attribution a { color: hsl(228, 45%, 44%); }
+	</style> -->
+</head>
+<body>
+
+	<main>
+		<header>
+		<h1>
+			calc
+		</h1>
+		<div class="theme--container">
+			<p>
+				THEME
+			</p>
+			<div class="accion--container">
+				<div class="theme--nums">
+					<p>1</p>
+					<p>2</p>
+					<p>3</p>
+				</div>
+				<div class="slider">
+					<input type="range" min="1" max="3">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="screen--background">
+		<p class="screen--num" id="screen" data-initial="true">
+			0
+		</p>
+	</section>
+
+	<section class="keyPad--background">
+		<div class="keypad--container" id="keyPad">
+			<div class="num--button" id="num-seven" data-type="num" data-value="7">7</div>
+			<div class="num--button" id="num-eight" data-type="num" data-value="8">8</div>
+			<div class="num--button" id="num-nine" data-type="num" data-value="9">9</div>
+			<div class="del--button" id="num-del" data-type="accion" data-accionType="del" data-value="del">DEL</div>
+			<div class="num--button" id="num-four" data-type="num" data-value="4">4</div>
+			<div class="num--button" id="num-five" data-type="num" data-value="5">5</div>
+			<div class="num--button" id="num-six" data-type="num" data-value="6">6</div>
+			<div class="num--button" id="num-plus" data-type="accion" data-accionType="plus" data-value="+">+</div>
+			<div class="num--button" id="num-one" data-type="num" data-value="1">1</div>
+			<div class="num--button" id="num-two" data-type="num" data-value="2">2</div>
+			<div class="num--button" id="num-three" data-type="num" data-value="3">3</div>
+			<div class="num--button" id="num-minus" data-type="accion" data-accionType="minus" data-value="-">-</div>
+			<div class="num--button" id="num-dot" data-type="dot" data-value=".">.</div>
+			<div class="num--button" id="num-zero" data-type="num" data-value="0">0</div>
+			<div class="num--button" id="num-div" data-type="accion" data-accionType="div" data-value="/">/</div>
+			<div class="num--button" id="num-mul" data-type="accion" data-accionType="mul" data-value="x">x</div>
+			<div class="reset--button" id="num-reset" data-type="accion" data-accionType="reset" data-value="reset">RESET</div>
+			<div class="equal--button" id="num-equal" data-type="accion" data-accionType="equal" data-value="=">=</div>
+		</div>
+	</section>
+	</main>
+
+	<!-- <div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Coded by <a href="#">Ezequiel Alarcon</a>.
+	</div> -->
+</body>
+</html>
