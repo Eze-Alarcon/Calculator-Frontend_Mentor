@@ -120,14 +120,22 @@ header .theme--container {
 
 .screen--background {
     max-width: 100%;
+    min-width: 90%;
     height: 15%;
     background-color: var(--screen--background);
     border: 1px solid #000;
     border-radius: 8px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-right: 20px;
+}
+
+.screen--info {
+    align-self: flex-start;
+    color: var(--text--color);
+    font-size: .7rem;
+    margin: 15px 0 0 20px;
 }
 
 .screen--num {
