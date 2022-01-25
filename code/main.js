@@ -100,18 +100,20 @@ function del() {
 }
 
 
-function reset() {
-    logs.record0 = ""
+function reset(preserve = true) {
     logs.record1 = ""
     logs.action = ""
-    screen.innerHTML = ""
-    screenInfo.innerHTML = ''
-    screen.dataset.initial = "true"
+    if (preserve) {
+        logs.record0 = ""
+        screen.innerHTML = "0"
+        screenInfo.innerHTML = ''
+    }
 }
 
 
 function equal() {
 
+    if (logs.record1 === "") logs.record1 = "0"
     let num0 = Number(logs.record0)
     let num1 = Number(logs.record1)
 
@@ -134,22 +136,32 @@ function equal() {
             logs.status = "ok"
     }
     if (logs.status === "ok") {
-        if (Number(logs.record0) < 0) logs.record0.toFixed(2)
+        
+        numCheck()
+
+
         screenInfo.innerHTML = `${calc} = ${logs.record0}`
         screen.innerHTML = `${logs.record0}`
-        logs.record1 = ""
+        reset(false)
     } else {
-        screenInfo.innerHTML = ""
+        reset()
         screen.innerHTML = "Syntax Error"
     }
 }
 
 function divide(num0, num1) {
-    console.log(logs.record0 !== "0")
     if (logs.record0 !== "0") {
         logs.record0 = num1 / num0
         logs.status = "ok"        
     } else {
         logs.status = "invalid"
     }
+}
+
+function numCheck() {
+    
+    let result = (Number(logs.record0) - Math.floor(Number(logs.record0)))
+    result !== 0
+        ? logs.record0 = Number(logs.record0).toFixed(2)
+        : logs.record0 = Number(logs.record0).toFixed(0)   
 }
