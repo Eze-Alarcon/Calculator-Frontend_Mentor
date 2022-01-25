@@ -165,3 +165,5 @@ function numCheck() {
         ? logs.record0 = Number(logs.record0).toFixed(2)
         : logs.record0 = Number(logs.record0).toFixed(0)   
 }
+
+// Comenzar con los themes
