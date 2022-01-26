@@ -3,6 +3,7 @@
 let pad = document.getElementById("keyPad")
 let screen = document.getElementById("screen")
 let screenInfo = document.getElementById("screen--data")
+let scrollTheme = document.getElementById("themeSwitch")
 let screenValue = 0
 
 let logs = {
@@ -16,6 +17,7 @@ let logs = {
 
 
 pad.addEventListener("click", press)
+scrollTheme.addEventListener("change", test)
 
 
 // ===== Functions =====
@@ -167,3 +169,12 @@ function numCheck() {
 }
 
 // Comenzar con los themes
+
+// ===== Themes =====
+
+function test(e) {
+    // document.body.style.setProperty("--main--background", "red")
+
+    console.log('Hola', e)
+}
+
