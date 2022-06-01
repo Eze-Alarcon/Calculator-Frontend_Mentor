@@ -1,87 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-	<title>Frontend Mentor | Calculator app</title>
+		<title>Calculator app</title>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
-	
-	<link rel="stylesheet" href="./code/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+			rel="stylesheet"
+		/>
 
-	<script defer src="./code/main.js"></script>
+		<link rel="stylesheet" href="./code/style.css" />
 
-
-
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<!-- <style>
-		.attribution { font-size: 11px; text-align: center; }
-		.attribution a { color: hsl(228, 45%, 44%); }
-	</style> -->
-</head>
-<body>
-
-	<main>
-		<header>
-		<h1>
-			calc
-		</h1>
-		<div class="theme--container">
-			<p>
-				THEME
-			</p>
-			<div class="accion--container">
-				<div class="theme--nums">
-					<p>1</p>
-					<p>2</p>
-					<p>3</p>
+		<script defer src="./code/main.js"></script>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>calc</h1>
+				<div class="theme--container">
+					<p>THEME</p>
+					<div class="accion--container">
+						<div class="theme--nums">
+							<p>1</p>
+							<p>2</p>
+							<p>3</p>
+						</div>
+						<div class="slider">
+							<input type="range" min="1" max="3" value="1" id="themeSwitch" />
+						</div>
+					</div>
 				</div>
-				<div class="slider">
-					<input type="range" min="1" max="3" value="1" id="themeSwitch">
+			</header>
+
+			<section class="screen--background">
+				<p class="screen--info" id="screen--data"></p>
+				<p class="screen--num" id="screen">0</p>
+			</section>
+
+			<section class="keyPad--background">
+				<div class="keypad--container" id="keyPad">
+					<div class="num--button" data-type="num" data-value="7">7</div>
+					<div class="num--button" data-type="num" data-value="8">8</div>
+					<div class="num--button" data-type="num" data-value="9">9</div>
+					<div class="del--button" data-type="special" data-value="del">
+						DEL
+					</div>
+					<div class="num--button" data-type="num" data-value="4">4</div>
+					<div class="num--button" data-type="num" data-value="5">5</div>
+					<div class="num--button" data-type="num" data-value="6">6</div>
+					<div class="num--button" data-type="action" data-value="+">+</div>
+					<div class="num--button" data-type="num" data-value="1">1</div>
+					<div class="num--button" data-type="num" data-value="2">2</div>
+					<div class="num--button" data-type="num" data-value="3">3</div>
+					<div class="num--button" data-type="action" data-value="-">-</div>
+					<div class="num--button" data-type="dot" data-value=".">.</div>
+					<div class="num--button" data-type="num" data-value="0">0</div>
+					<div class="num--button" data-type="action" data-value="/">/</div>
+					<div class="num--button" data-type="action" data-value="x">x</div>
+					<div class="reset--button" data-type="special" data-value="reset">
+						RESET
+					</div>
+					<div class="equal--button" data-type="special" data-value="equal">
+						=
+					</div>
 				</div>
-			</div>
-		</div>
-	</header>
-
-	<section class="screen--background">
-		<p class="screen--info" id="screen--data"></p>
-		<p class="screen--num" id="screen">
-			0
-		</p>
-	</section>
-
-	<section class="keyPad--background">
-		<div class="keypad--container" id="keyPad">
-			<div class="num--button" data-type="num" data-value="7">7</div>
-			<div class="num--button" data-type="num" data-value="8">8</div>
-			<div class="num--button" data-type="num" data-value="9">9</div>
-			<div class="del--button" data-type="special" data-value="del">DEL</div>
-			<div class="num--button" data-type="num" data-value="4">4</div>
-			<div class="num--button" data-type="num" data-value="5">5</div>
-			<div class="num--button" data-type="num" data-value="6">6</div>
-			<div class="num--button" data-type="action" data-value="+">+</div>
-			<div class="num--button" data-type="num" data-value="1">1</div>
-			<div class="num--button" data-type="num" data-value="2">2</div>
-			<div class="num--button" data-type="num" data-value="3">3</div>
-			<div class="num--button" data-type="action" data-value="-">-</div>
-			<div class="num--button" data-type="dot" data-value=".">.</div>
-			<div class="num--button" data-type="num" data-value="0">0</div>
-			<div class="num--button" data-type="action" data-value="/">/</div>
-			<div class="num--button" data-type="action" data-value="x">x</div>
-			<div class="reset--button" data-type="special" data-value="reset">RESET</div>
-			<div class="equal--button" data-type="special" data-value="equal">=</div>
-		</div>
-	</section>
-	</main>
-
-	<!-- <div class="attribution">
-		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-		Coded by <a href="#">Ezequiel Alarcon</a>.
-	</div> -->
-</body>
+			</section>
+		</main>
+	</body>
 </html>
