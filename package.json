@@ -1,0 +1,26 @@
+{
+  "name": "calculator-app-main",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges helps me by improving my coding skills though building realistic projects.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eze-Alarcon/Calculator-Frontend_Mentor.git"
+  },
+  "keywords": [],
+  "author": "ezequiel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eze-Alarcon/Calculator-Frontend_Mentor/issues"
+  },
+  "homepage": "https://github.com/Eze-Alarcon/Calculator-Frontend_Mentor#readme",
+  "devDependencies": {
+    "standard": "17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}
