@@ -97,7 +97,7 @@ const color3 = {
 // ===== Event Listeners =====
 
 pad.addEventListener('click', press)
-scrollTheme.addEventListener('change', test)
+scrollTheme.addEventListener('change', switchTheme)
 
 // ===== Functions =====
 
@@ -180,11 +180,11 @@ function reset(preserve = true) {
 }
 
 function equal() {
-  if (logs.record1 === '') logs.record1 = '0'
+  if (logs.record1 === '') logs.record1 = 0
   const num0 = Number(logs.record0)
   const num1 = Number(logs.record1)
 
-  const calc = `${logs.record1} ${logs.action} ${logs.record0}`
+  const calc = `${num1} ${logs.action} ${num0}`
 
   switch (logs.action) {
     case '+':
@@ -201,6 +201,9 @@ function equal() {
     case 'x':
       logs.record0 = (num1 * num0).toFixed(0)
       logs.status = 'ok'
+      break
+    default:
+      logs.status = 'invalid'
   }
   if (logs.status === 'ok') {
     numCheck()
@@ -234,7 +237,7 @@ function numCheck() {
 
 // ===== Themes =====
 
-function test() {
+function switchTheme() {
   if (this.value === '1') theme(color1)
   if (this.value === '2') theme(color2)
   if (this.value === '3') theme(color3)
