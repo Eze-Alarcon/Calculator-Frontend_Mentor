@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="./src/style.css" />
 
-    <script defer src="./src/main.js"></script>
+    <script defer type="module" src="./src/main.mjs"></script>
   </head>
   <body>
     <main>
@@ -37,45 +37,191 @@
               <p>3</p>
             </div>
             <div class="slider">
-              <input type="range" min="1" max="3" value="1" id="themeSwitch" />
+              <input
+                type="range"
+                min="1"
+                max="3"
+                value="1"
+                id="themeSwitch"
+                aria-labelledby="Switch theme colors"
+                role="presentation"
+              />
             </div>
           </div>
         </div>
       </header>
 
-      <section class="screen--background">
+      <div class="screen--background">
         <p class="screen--info" id="screen--data"></p>
         <p class="screen--num" id="screen">0</p>
-      </section>
+      </div>
 
-      <section class="keyPad--background">
+      <div class="keyPad--background">
         <div class="keypad--container" id="keyPad">
-          <div class="num--button" data-type="num" data-value="7">7</div>
-          <div class="num--button" data-type="num" data-value="8">8</div>
-          <div class="num--button" data-type="num" data-value="9">9</div>
-          <div class="del--button" data-type="special" data-value="del">
+          <div
+            class="num--button"
+            role="button"
+            tabindex="1"
+            data-type="num"
+            data-value="7"
+          >
+            7
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="2"
+            data-type="num"
+            data-value="8"
+          >
+            8
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="3"
+            data-type="num"
+            data-value="9"
+          >
+            9
+          </div>
+          <div
+            class="del--button"
+            role="button"
+            tabindex="4"
+            data-type="special"
+            data-value="del"
+          >
             DEL
           </div>
-          <div class="num--button" data-type="num" data-value="4">4</div>
-          <div class="num--button" data-type="num" data-value="5">5</div>
-          <div class="num--button" data-type="num" data-value="6">6</div>
-          <div class="num--button" data-type="action" data-value="+">+</div>
-          <div class="num--button" data-type="num" data-value="1">1</div>
-          <div class="num--button" data-type="num" data-value="2">2</div>
-          <div class="num--button" data-type="num" data-value="3">3</div>
-          <div class="num--button" data-type="action" data-value="-">-</div>
-          <div class="num--button" data-type="dot" data-value=".">.</div>
-          <div class="num--button" data-type="num" data-value="0">0</div>
-          <div class="num--button" data-type="action" data-value="/">/</div>
-          <div class="num--button" data-type="action" data-value="x">x</div>
-          <div class="reset--button" data-type="special" data-value="reset">
+          <div
+            class="num--button"
+            role="button"
+            tabindex="5"
+            data-type="num"
+            data-value="4"
+          >
+            4
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="6"
+            data-type="num"
+            data-value="5"
+          >
+            5
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="7"
+            data-type="num"
+            data-value="6"
+          >
+            6
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="8"
+            data-type="action"
+            data-value="+"
+          >
+            +
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="9"
+            data-type="num"
+            data-value="1"
+          >
+            1
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="10"
+            data-type="num"
+            data-value="2"
+          >
+            2
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="11"
+            data-type="num"
+            data-value="3"
+          >
+            3
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="12"
+            data-type="action"
+            data-value="-"
+          >
+            -
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="13"
+            data-type="dot"
+            data-value="."
+          >
+            .
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="14"
+            data-type="num"
+            data-value="0"
+          >
+            0
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="16"
+            data-type="action"
+            data-value="/"
+          >
+            /
+          </div>
+          <div
+            class="num--button"
+            role="button"
+            tabindex="16"
+            data-type="action"
+            data-value="x"
+          >
+            x
+          </div>
+          <div
+            class="reset--button"
+            role="button"
+            tabindex="17"
+            data-type="special"
+            data-value="reset"
+          >
             RESET
           </div>
-          <div class="equal--button" data-type="special" data-value="equal">
+          <div
+            class="equal--button"
+            role="button"
+            tabindex="18"
+            data-type="special"
+            data-value="equal"
+          >
             =
           </div>
         </div>
-      </section>
+      </div>
     </main>
   </body>
 </html>

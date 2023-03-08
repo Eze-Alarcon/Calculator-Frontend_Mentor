@@ -1,6 +1,6 @@
 # Frontend Mentor - Calculator app solution
 
-This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges helps me by improving my coding skills though building realistic projects. 
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges helps me by improving my coding skills though building realistic projects.
 
 ## Table of contents
 
@@ -15,8 +15,6 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
   - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -47,13 +45,17 @@ Users should be able to:
 
 ### What I learned
 
-I did this project right after finishing my JavaScript course at "CoderHouse" and after taking several add-on courses at "Platzi". Thanks to these courses I decided to start this project. 
+I did this project right after finishing my JavaScript course at "CoderHouse" and after taking several add-on courses at "Platzi". Thanks to these courses I decided to start this project.
 
-At the beginning it was a bit difficult, thinking of a way to solve the problem while I had my mind on other problems of everyday life was a bit challenging but in the end I came up with a solution. To this day it may not be the best solution, for sure there are thousands of implementations better done than the one exposed in this project but this also serves as a reminder that "it is always better to do something than nothing". 
+At the beginning it was a bit difficult, thinking of a way to solve the problem while I had my mind on other problems of everyday life was a bit challenging but in the end I came up with a solution.
 
 ### Continued development
 
-To this day I still think about the implementation I did for this project. I haven't changed it and I honestly don't think I will because a certain part of me wants to expose that even though it's not the best code, it does the job.
+After learning a lot about how the language works, good practices and more related topics, I found some points to improve.
+
+Details like refactoring the code, variable names and even the implementation were details that maybe at the time I overlooked but not today.
+
+Nevertheless, the challenge was completed.
 
 ## Author
 
